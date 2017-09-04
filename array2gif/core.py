@@ -52,7 +52,7 @@ def check_dataset_shape(dataset):
 
 def check_dataset(dataset):
     """Confirm shape (3 colors x rows x cols) and values [0 to 255] are OK."""
-    if isinstance(dataset, numpy.ndarray) and dataset.shape == 3:
+    if isinstance(dataset, numpy.ndarray) and len(dataset.shape) == 3:
         check_dataset_shape(dataset)
         check_dataset_range(dataset)
     else:  # must be a list of arrays
@@ -362,7 +362,7 @@ def write_gif(dataset, filename, fps=10):
     delay_time = 100 // int(fps)
 
     def encode(d):
-        if isinstance(d, list) or d.shape == 4:
+        if isinstance(d, list) or len(d.shape) == 4:
             return _make_animated_gif(d, delay_time=delay_time)
         else:
             return _make_gif(d)
