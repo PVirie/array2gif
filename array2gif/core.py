@@ -362,7 +362,7 @@ def write_gif(dataset, filename, fps=10):
     delay_time = 100 // int(fps)
 
     def encode(d):
-        if isinstance(d, list) || d.shape == 4:
+        if isinstance(d, list) or d.shape == 4:
             return _make_animated_gif(d, delay_time=delay_time)
         else:
             return _make_gif(d)
