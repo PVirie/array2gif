@@ -52,7 +52,7 @@ def check_dataset_shape(dataset):
 
 def check_dataset(dataset):
     """Confirm shape (3 colors x rows x cols) and values [0 to 255] are OK."""
-    if isinstance(dataset, numpy.ndarray):
+    if isinstance(dataset, numpy.ndarray) and dataset.shape == 4:
         check_dataset_shape(dataset)
         check_dataset_range(dataset)
     else:  # must be a list of arrays
