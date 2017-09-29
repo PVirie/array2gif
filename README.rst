@@ -55,7 +55,11 @@ Either: ::
 
 or: ::
 
-    pip install git+https://github.com/tanyaschlusser/array2gif.git#egg=array2gif
+    sudo pip install git+https://github.com/pvirie/array2gif.git#egg=array2gif
+
+to upgrade: ::
+    
+    sudo pip install --upgrade git+https://github.com/pvirie/array2gif.git#egg=array2gif
 
 
 
