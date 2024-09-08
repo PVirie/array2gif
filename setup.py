@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-import array2gif
-
 try:
     from setuptools import setup
 except ImportError:
@@ -13,8 +11,8 @@ packages = ['array2gif']
 
 
 setup(
-    name=array2gif.core.__title__,
-    version=array2gif.core.__version__,
+    name="array2gif",
+    version="1.0",
     description='Write a (list of) NumPy array(s) to an (animated) GIF.',
     long_description=long_description,
     classifiers=(
@@ -31,10 +29,10 @@ setup(
         'Topic :: Scientific/Engineering :: Visualization'
     ),
     keywords='array2gif animated gif encoder numpy rgb',
-    author=array2gif.core.__author__,
+    author="Tanya Schlusser",
     maintainer='Tanya Schlusser',
-    url='https://github.com/tanyaschlusser/array2gif',
-    license=array2gif.core.__license__,
+    url='https://github.com/PVirie/array2gif',
+    license='BSD',
     packages=packages,
     install_requires=[
         'numpy'
